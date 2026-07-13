@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="icon" type="image/x-icon" href="images/icon2.png">
+    <link rel="stylesheet" href="../css/design.css">
+
+    <title>Login</title>
+    <style>
+       /* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+
+    background:linear-gradient(-45deg,
+    #0f4884,
+    #1c6bb5,
+    #e48fb7,
+    #0f4884);
+
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+}
+
+/* Animated Background */
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ===========================
+   Floating Circles
+=========================== */
+
+body::before,
+body::after{
+
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(50px);
+    z-index:-1;
+
+}
+
+body::before{
+
+    width:300px;
+    height:300px;
+    background:#e48fb7;
+    top:-80px;
+    left:-80px;
+    animation:float1 8s infinite alternate;
+
+}
+
+body::after{
+
+    width:350px;
+    height:350px;
+    background:#0f4884;
+    bottom:-120px;
+    right:-100px;
+    animation:float2 10s infinite alternate;
+
+}
+
+@keyframes float1{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(50px);
+    }
+
+}
+
+@keyframes float2{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-60px);
+    }
+
+}
+
+/* ===========================
+   Login Card
+=========================== */
+
+.login-container{
+
+    width:100%;
+    max-width:420px;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
+    animation:loginFade .8s ease;
+
+}
+
+/* Fade Animation */
+
+@keyframes loginFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.login-header{
+
+    text-align:center;
+    margin-bottom:35px;
+
+}
+
+.login-header h2{
+
+    color:#fff;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:8px;
+
+}
+
+.login-header p{
+
+    color:#f3f3f3;
+    font-size:15px;
+
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+    margin-bottom:8px;
+
+    color:#fff;
+    font-weight:500;
+
+}
+
+.input-group input{
+
+    width:100%;
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    border:2px solid transparent;
+
+    background:rgba(255,255,255,.20);
+
+    color:#fff;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.input-group input::placeholder{
+
+    color:#ececec;
+
+}
+
+.input-group input:focus{
+
+    outline:none;
+
+    border-color:#e48fb7;
+
+    background:rgba(255,255,255,.28);
+
+    box-shadow:
+    0 0 15px rgba(228,143,183,.45);
+
+}
+
+/* ===========================
+   Remember Me
+=========================== */
+
+.form-actions{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+
+    color:#fff;
+    font-size:14px;
+
+}
+
+.checkbox-label{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+}
+
+.form-actions a{
+
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.form-actions a:hover{
+
+    color:#e48fb7;
+
+}
+
+/* ===========================
+   Login Button
+=========================== */
+
+.btn-login{
+
+    width:100%;
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#0f4884,#e48fb7);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.btn-login:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(228,143,183,.45);
+
+}
+
+/* Button Click */
+
+.btn-login:active{
+
+    transform:scale(.98);
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.login-footer{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+.login-footer a{
+
+    color:#fff;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.login-footer a:hover{
+
+    color:#e48fb7;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:480px){
+
+    .login-container{
+
+        margin:20px;
+        padding:30px;
+
+    }
+
+    .login-header h2{
+
+        font-size:28px;
+
+    }
+
+}
+    </style>
+</head>
+<body>
+     <header class="main-header">
+
+        <!-- header logo section -->
+        <div class="header-container">
+            <img src="/images/icon2.png" alt="" class="header-logo">
+            <h1 class="header-name"><i>Rossy Events</i></h1>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+       </div>
+
+        <!-- Navbar section -->
+        <!-- <nav class="navbar">
+            <ul class="nav-links" id="navLinks"> -->
+               <!-- <li><a href="#">Home</a></li>
+               <li><a href="#">Events</a></li>
+               <li><a href="#">Venues</a></li>
+               <li><a href="#">Contact</a></li> -->
+               <!-- <li>
+                   <button class="login-btn">
+                       <a href="login.html">Login</a>
+                    </button>
+              </li>
+            </ul>  
+        </nav>   -->
+    </header>
+
+    <!-- page section -->
+     <section class="hero-section">
+         <div class="frame">
+         <div class="frame-content">
+            <i><h2>"Creating Moments That Matter, Memories That Last Forever."</h2></i>
+            <h4>From weddings and corporate gatherings to birthday celebrations and special occasions, we bring your vision to life with creativity, passion, and precision.</h4>
+         </div>
+         </div>
+     </section>
+
+     <div class="login-container">
+    <div class="login-header">
+        <h2>Welcome Back</h2>
+        <p>Please enter your details to sign in.</p>
+    </div>
+    
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@company.com" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        
+        <div class="form-actions">
+            <label class="checkbox-label">
+                <input type="checkbox" name="remember"> Remember Me
+            </label>
+            <a href="./forgot.html">Forgot Password?</a>
+        </div>
+        
+        <button type="submit" class="btn-login">Log In</button>
+    </form>
+    
+    <div class="login-footer">
+        <p>Don't have an account? <a href="./register.html">Sign up</a></p>
+    </div>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email !== "" && password !== "") {
+        alert("Login Successful!");
+        window.location.href = "home.html";
+    } else {
+        alert("Please enter your email and password.");
+    }
+});
+</script>
+
+     <script src="../script.js"></script>
+</body>
+</html>
