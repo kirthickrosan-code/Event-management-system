@@ -18,7 +18,7 @@ body {
    background-color: #0f4884;
 
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -102,6 +102,7 @@ body {
    align-items: center;
    padding: 30px;
    background: #f8f8f8;
+   padding-top: 70px;
 }
 
 .frame {
@@ -136,7 +137,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: white;
+    background: rgb(35, 46, 131);
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     z-index: 1000;
 }
@@ -253,5 +254,137 @@ body {
         font-size: 10px;
         line-height: 1.8;
         font-weight: 500;
+    }
+}
+
+/* ===========================
+   Tablet (992px and below)
+=========================== */
+@media (max-width: 992px) {
+
+    body {
+        padding: 100px 20px 30px;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hero-section {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .frame {
+        width: 100%;
+        max-width: 700px;
+        padding-bottom: 20px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* ===========================
+   Mobile (768px and below)
+=========================== */
+@media (max-width: 768px) {
+
+    body {
+        padding: 90px 15px 20px;
+    }
+
+    .hero-section {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .frame {
+        width: 100%;
+        padding-bottom: 20px;
+        margin-bottom: 0%;
+    }
+
+    .frame-content h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .frame-content h4 {
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .login-header h2 {
+        font-size: 28px;
+    }
+
+    .login-header p {
+        font-size: 14px;
+    }
+
+    .input-group input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-login {
+        padding: 13px;
+        font-size: 16px;
+    }
+}
+
+/* ===========================
+   Small Mobile (480px and below)
+=========================== */
+@media (max-width: 480px) {
+
+    body {
+        padding: 80px 10px 20px;
+    }
+
+    .login-container {
+        padding: 25px 15px;
+        border-radius: 8px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .login-header p {
+        font-size: 13px;
+    }
+
+    .frame-content h2 {
+        font-size: 18px;
+    }
+
+    .frame-content h4 {
+        font-size: 14px;
+    }
+
+    .btn-login {
+        font-size: 15px;
+        padding: 12px;
     }
 }
