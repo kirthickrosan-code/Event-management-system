@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="icon" type="image/x-icon" href="images/icon2.png">
+    <link rel="stylesheet" href="../css/design.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .login-header p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+        }
+
+        .form-actions a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-login:hover {
+            background-color: #2980b9;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        .login-footer a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+     <header class="main-header">
+
+        <!-- header logo section -->
+        <div class="header-container">
+            <img src="/images/icon2.png" alt="" class="header-logo">
+            <h1 class="header-name"><i>Rossy Events</i></h1>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+       </div>
+
+        <!-- Navbar section -->
+        <nav class="navbar">
+            <ul class="nav-links" id="navLinks">
+               <!-- <li><a href="#">Home</a></li>
+               <li><a href="#">Events</a></li>
+               <li><a href="#">Venues</a></li>
+               <li><a href="#">Contact</a></li> -->
+               <li>
+                   <!-- <button class="login-btn">
+                       <a href="login.html">Login</a>
+                    </button> -->
+              </li>
+            </ul>  
+        </nav>  
+    </header>
+
+    <!-- page section -->
+     <section class="hero-section">
+         <div class="frame">
+         <div class="frame-content">
+            <i><h2>"Creating Moments That Matter, Memories That Last Forever."</h2></i>
+            <h4>From weddings and corporate gatherings to birthday celebrations and special occasions, we bring your vision to life with creativity, passion, and precision.</h4>
+         </div>
+         </div>
+     </section>
+
+     <div class="login-container">
+    <div class="login-header">
+        <h2>Welcome Back</h2>
+        <p>Please enter your details to sign in.</p>
+    </div>
+    
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@company.com" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        
+        <div class="form-actions">
+            <label class="checkbox-label">
+                <input type="checkbox" name="remember"> Remember Me
+            </label>
+            <a href="./forgot.html">Forgot Password?</a>
+        </div>
+        
+        <button type="submit" class="btn-login">Log In</button>
+    </form>
+    
+    <div class="login-footer">
+        <p>Don't have an account? <a href="./register.html">Sign up</a></p>
+    </div>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email !== "" && password !== "") {
+        alert("Login Successful!");
+        window.location.href = "home.html";
+    } else {
+        alert("Please enter your email and password.");
+    }
+});
+</script>
+
+     <script src="../script.js"></script>
+</body>
+</html>
