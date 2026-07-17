@@ -1311,3 +1311,800 @@ body{
 html {
     scroll-behavior: smooth;
 }
+
+/* whyus.html */
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-choose-us{
+    width:100%;
+    padding:90px 8%;
+    background:#f8fbff;
+    padding-bottom: 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#0f4884;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.choose-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.choose-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s ease;
+    border-top:5px solid #0f4884;
+}
+
+.choose-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(15,72,132,0.18);
+    border-top-color:#e48fb7;
+}
+
+.choose-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0f4884,#e48fb7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    color:#fff;
+}
+
+.choose-card h3{
+    color:#0f4884;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.choose-card p{
+    color:#666;
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .choose-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+}
+
+@media(max-width:768px){
+
+    .why-choose-us{
+        padding:70px 5%;
+    }
+
+    .choose-container{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .section-title p{
+        font-size:15px;
+    }
+
+    .choose-card{
+        padding:30px 20px;
+    }
+}
+
+
+/* event.html */
+/* ===========================
+   OUR EVENTS SECTION
+=========================== */
+
+.our-events{
+    width:100%;
+    padding:90px 8%;
+    background:#ffffff;
+}
+
+/* Section Title */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#0f4884;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.section-title p{
+    max-width:750px;
+    margin:auto;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* Events Grid */
+
+.events-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* Event Card */
+
+.event-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s ease;
+    border:2px solid transparent;
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+    border-color:#e48fb7;
+    box-shadow:0 18px 35px rgba(15,72,132,0.18);
+}
+
+/* Event Image */
+
+.event-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+.event-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Event Content */
+
+.event-card h3{
+    color:#0f4884;
+    font-size:24px;
+    margin:20px 20px 10px;
+}
+
+.event-card p{
+    color:#666;
+    line-height:1.7;
+    font-size:15px;
+    margin:0 20px 18px;
+}
+
+/* Price */
+
+.event-card h4{
+    margin:0 20px 20px;
+    color:#444;
+    font-size:18px;
+    font-weight:600;
+}
+
+.event-card h4 span{
+    color:#e48fb7;
+    font-size:24px;
+    font-weight:700;
+}
+
+/* Button */
+
+.event-btn{
+    display:block;
+    width:calc(100% - 40px);
+    margin:0 20px 25px;
+    padding:13px;
+    text-align:center;
+    text-decoration:none;
+    background:linear-gradient(135deg,#0f4884,#e48fb7);
+    color:#fff;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.event-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(15,72,132,0.25);
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .events-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .our-events{
+        padding:70px 5%;
+    }
+
+    .events-container{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .section-title p{
+        font-size:15px;
+    }
+
+    .event-card img{
+        height:200px;
+    }
+
+    .event-card h3{
+        font-size:22px;
+    }
+
+    .event-card h4 span{
+        font-size:22px;
+    }
+
+}
+
+/* venue.html */
+
+/* ===========================
+   POPULAR VENUES
+=========================== */
+
+.venues-section{
+    padding:90px 8%;
+    background:#f8fbff;
+}
+
+.venues-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.venue-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.venue-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(15,72,132,.18);
+}
+
+.venue-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.venue-card:hover img{
+    transform:scale(1.08);
+}
+
+.venue-content{
+    padding:22px;
+}
+
+.venue-content h3{
+    color:#0f4884;
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.venue-location{
+    color:#e48fb7;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.venue-content p{
+    color:#666;
+    line-height:1.7;
+}
+
+.venue-info{
+    display:flex;
+    justify-content:space-between;
+    margin:18px 0;
+    font-weight:600;
+    color:#444;
+}
+
+.venue-content h4{
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.venue-content h4 span{
+    color:#e48fb7;
+    font-size:24px;
+}
+
+.venue-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:linear-gradient(135deg,#0f4884,#e48fb7);
+    color:#fff;
+    padding:13px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.venue-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(15,72,132,.25);
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .venues-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .venues-section{
+        padding:70px 5%;
+    }
+
+    .venues-container{
+        grid-template-columns:1fr;
+    }
+
+    .venue-card img{
+        height:220px;
+    }
+
+}
+
+/* about.html */
+
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about-section{
+    padding:90px 8%;
+    background:#ffffff;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+/* Left Image */
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+/* Right Content */
+
+.about-content{
+    flex:1;
+}
+
+.about-content h3{
+    font-size:34px;
+    color:#0f4884;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:18px;
+    font-size:16px;
+}
+
+/* Statistics */
+
+.about-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin:35px 0;
+}
+
+.feature-box{
+    background:#f8fbff;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-box:hover{
+    background:#0f4884;
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+.feature-box h2{
+    color:#e48fb7;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.feature-box:hover h2{
+    color:#fff;
+}
+
+.feature-box span{
+    font-size:16px;
+    font-weight:600;
+}
+
+/* Button */
+
+.about-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 35px;
+    background:linear-gradient(135deg,#0f4884,#e48fb7);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.about-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(15,72,132,.25);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .about-container{
+        flex-direction:column;
+    }
+
+    .about-image,
+    .about-content{
+        width:100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .about-section{
+        padding:70px 5%;
+    }
+
+    .about-content h3{
+        font-size:28px;
+    }
+
+    .about-features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* reviews.html*/
+
+/* ===========================
+   CUSTOMER REVIEWS
+=========================== */
+
+.reviews-section{
+    padding:90px 8%;
+    background:#f8fbff;
+}
+
+.reviews-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.review-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(15,72,132,.18);
+}
+
+.review-card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #e48fb7;
+    margin-bottom:18px;
+}
+
+.review-card h3{
+    color:#0f4884;
+    margin-bottom:5px;
+    font-size:22px;
+}
+
+.review-card span{
+    color:#e48fb7;
+    font-weight:600;
+    display:block;
+    margin-bottom:12px;
+}
+
+.stars{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.review-card p{
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .reviews-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .reviews-section{
+        padding:70px 5%;
+    }
+
+    .reviews-container{
+        grid-template-columns:1fr;
+    }
+
+    .review-card{
+        padding:25px;
+    }
+
+}
+
+/* contact.html */
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+.contact-section{
+    padding:90px 8%;
+    background:#ffffff;
+}
+
+.contact-container{
+    display:flex;
+    gap:50px;
+    align-items:flex-start;
+    margin-top:50px;
+}
+
+/* Contact Info */
+
+.contact-info{
+    flex:1;
+}
+
+.contact-info h3{
+    color:#f7f7f7;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#000000;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.info-box{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:25px;
+    padding:18px;
+    border-radius:15px;
+    background:#f8fbff;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+}
+
+.info-box span{
+    font-size:28px;
+}
+
+.info-box h4{
+    color:#0f4884;
+    margin-bottom:5px;
+}
+
+/* Contact Form */
+
+.contact-form{
+    flex:1;
+    background:#f8fbff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#0f4884;
+    box-shadow:0 0 8px rgba(15,72,132,.2);
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#0f4884,#e48fb7);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(15,72,132,.25);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .contact-container{
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .contact-section{
+        padding:70px 5%;
+    }
+
+    .contact-info h3{
+        font-size:28px;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+
+}
