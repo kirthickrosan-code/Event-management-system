@@ -185,14 +185,14 @@
             <label class="checkbox-label">
                 <input type="checkbox" name="remember"> Remember Me
             </label>
-            <a href="/forgot.html">Forgot Password?</a>
+            <a href="forgot.html">Forgot Password?</a>
         </div>
         
         <button type="submit" class="btn-login">Log In</button>
     </form>
     
     <div class="login-footer">
-        <p>Don't have an account? <a href="/register.html">Sign up</a></p>
+        <p>Don't have an account? <a href="register.html">Sign up</a></p>
     </div>
 </div>
 
@@ -205,13 +205,13 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
     if (email !== "" && password !== "") {
         alert("Login Successful!");
-        window.location.href = "/home.html";
+        window.location.href = "home.html";
     } else {
         alert("Please enter your email and password.");
     }
 });
 </script>
 
-     <script src="/script.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>
